@@ -1,4 +1,5 @@
-package long2chen.demo.ioc;
+package long2chen.demo.ioc.step1;
+
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -9,13 +10,15 @@ import java.util.concurrent.ConcurrentHashMap;
  */
 public  class BeanFactory {
 
-    private Map<String, BeanDefinition> beanDefinitionMap = new ConcurrentHashMap<>();
+    private final static Map<String, BeanDefinition> beanDefinitionMap = new ConcurrentHashMap<>();
 
-    public Object getBean(String bName) {
+
+    public Object getBean(String bName){
         return beanDefinitionMap.get(bName).getBean();
     }
 
     public void registerBeanDefinition(String bName, BeanDefinition beanDefinition) {
         beanDefinitionMap.put(bName, beanDefinition);
     }
+
 }

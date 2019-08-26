@@ -1,5 +1,7 @@
-package long2chen.demo.ioc;
+package long2chen.demo.ioc.step1;
 
+import long2chen.demo.ioc.step1.BeanDefinition;
+import long2chen.demo.ioc.step1.BeanFactory;
 import org.junit.Test;
 
 /**
@@ -9,6 +11,9 @@ import org.junit.Test;
 public class BeanFactoryTest {
 
 
+    /**
+     * step1
+     */
 
     @Test
     public void testBeanFactory(){
@@ -25,6 +30,8 @@ public class BeanFactoryTest {
         helloWorldService.say();
 
     }
+
+
 
 
     /**
